@@ -1,0 +1,19 @@
+﻿<div id="wrap">
+	<h3>Vali oma lemmik :)</h3>
+	<form action="kontroller.php" method="POST">
+         <?php
+                global $galerii;
+                foreach ($galerii as $key => $value) {
+                    $key++;
+                    echo "<p>";
+			            echo "<label for=\"p".$key."\">";
+				            echo "<img src=\"".$value ."\"". "alt=\"nimetu".$key."\"". "height=\"100\"/>";
+			            echo"</label>";
+			            echo "<input type=\"radio\"".  "value=\"".$key."\"". "id=\"p".$key."\"". "name=\"pilt\"/>";
+		            echo "</p>";
+                }
+         ?>
+		<br/>
+		<input type="submit" value="Valin!"/>
+	</form>
+</div>
